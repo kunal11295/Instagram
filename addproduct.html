@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+</head>
+<body>
+    <h1>POST</h1>
+    <form onsubmit="addproduct(event)">
+        <label>Name</label><br>
+        <input type="text" id="pname"><br>
+        <label>Post profile</label><br>
+        <input type="text" id="pprofile"><br>
+        <label>Post Image url </label><br>
+        <input type="text" id="pimage"><br>
+        <label>Caption</label><br>
+        <input type="text" id="pcaption"><br>
+        <input type="submit" ><br>  
+    </form>
+    <script>
+        function addproduct(event)
+        {
+            event.preventDefault();
+             //alert("product adding")
+             var proName=document.getElementById("pname").value;
+             var proprofile=document.getElementById("pprofile").value
+             var proImage=document.getElementById("pimage").value;
+             var procaption=document.getElementById("pcaption").value;
+             var product={proName,pprofile,proImage,procaption} ;
+
+             var Ls=JSON.parse(localStorage.getItem("InstagramProductList")) || [];
+             Ls.push(product);
+             localStorage.setItem("InstagramProductList",JSON.stringify(Ls));
+             alert("Product Successfully")
+             window.location.href = `./home.html`;
+        }
+    </script>
+
+</body>
+</html>

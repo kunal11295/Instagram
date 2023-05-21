@@ -1,0 +1,299 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.screen
+{
+    width: 100%;
+    display: flex;
+}
+.home-left
+{
+    width: 18%;
+    height: 2000px;
+    border-right: .1rem solid lightgrey;
+    position: absolute;
+}
+.logo-img
+{
+    width:100%;
+    /* border:1px solid black; */
+}
+.logo-img svg
+{
+    margin-top: 70px;
+    padding-right: 20px;
+}
+.nav-menu
+{
+    width: 100%;
+    
+}
+.navLink
+{
+   text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.navLink span
+{
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+.navLink i
+{
+    font-size: 1.3rem;
+}
+.navLink :hover
+{
+    background-color: rgb(224, 221, 221);
+    border-radius: .5rem;
+}
+.navLink:hover i
+{
+    transform: scale(1.2);
+    transition: .5s;
+}
+.home-middle
+{
+    width: 60%;
+    /* border: 1px solid black; */
+    margin-left: 320px;
+}
+.story
+{
+    width: 16%;
+    /* border: 1px solid beige; */
+}
+.story img
+{
+    width: 40%;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+}
+.story-holder-name 
+{
+    font-size: 20px;
+    margin-left: 2rem;
+    text-transform: uppercase;
+}
+.right
+{
+    width: 25%;
+    /* border: 1px solid black; */
+}
+.profile
+{
+    width: 100%;
+    display: flex;  
+}
+.logo-name
+{
+    width: 50%;
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    display: flex;
+    margin-left: 20px;
+}
+.logo-name img
+{
+    border-radius: 40%;
+}
+.name
+{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.name p
+{
+font-size: 20px;
+
+}
+.switch
+{
+margin-top: 3rem;
+margin-left: 5rem;
+font-size: 1.5rem;
+color: blue;
+}
+.suggest
+{
+display: flex;
+
+}
+.suggestion
+{
+margin-left: 20px;
+margin-top: 20px;
+color: gray;
+}
+.see
+{
+margin-left: 7rem;
+margin-top: 25px;
+font-size: 20px;
+font-weight: bold;
+}
+.accounts
+{
+    width: 100%;
+    display: flex;
+    margin-left: 20px;
+}
+.image
+{
+    width: 20%;
+    margin-top: 20px;
+   
+}
+.image img
+{
+width: 100%;
+border-radius: 50%;
+}
+.data
+{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.account-id
+{
+    font-size: 20px;
+    font-weight: 900;
+}
+.verified
+{
+    color: blue;
+}
+.follow
+{
+    margin-left: 100px;
+    margin-top: 20px;
+    color: blue;
+}
+/* #animalplanet
+{
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+  border: 1px solid black;
+  height: 680px;
+  margin-bottom: 100px;
+}
+#animalplanet img
+{
+    width: 100%;
+} */
+.g-pro-name
+{
+    font-size: 30px;
+}
+
+.profile-page
+{
+    width: 60%;
+    height: 720px;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 60px;
+}
+.heading
+{
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+}
+
+.post-id
+{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.dot
+{
+    margin-left:10px;
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.hour
+{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.icon1
+{
+    margin-left: 230px;
+}
+.icon1 i
+{
+     font-size: 40px;
+}
+.post-image
+{
+    width: 100%;
+}
+.post-image img
+{
+    width: 100%;
+}
+.post-footer
+{
+    width: 100%;
+    display: flex;
+}
+.post-footer i
+{
+    margin-left: 15px;
+    font-size: 25px;
+}
+.post-save
+{
+    margin-left: 450px;
+}
+.post-likes
+{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.p-comment
+{
+font-size: 18px;
+
+}
+.more
+{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.see-translation
+{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.view-comment
+{
+    margin-left: 20px;
+    font-size: 20px; 
+}
+.add-comment
+{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.g-pro-price
+{
+    font-size: 30px;
+}

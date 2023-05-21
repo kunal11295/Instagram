@@ -1,0 +1,275 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.screen
+{
+    width: 100%;
+}
+.home-left
+{
+    width: 18%;
+    height: 1000px;
+    border-right: .1rem solid lightgrey;
+    position: absolute;
+}
+.logo-img
+{
+    width:100%;
+    /* border:1px solid black; */
+}
+.logo-img svg
+{
+    margin-top: 70px;
+    padding-right: 20px;
+}
+.nav-menu
+{
+    width: 100%;
+    
+}
+.navLink
+{
+   text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.navLink span
+{
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+.navLink i
+{
+    font-size: 1.3rem;
+}
+.navLink :hover
+{
+    background-color: rgb(224, 221, 221);
+    border-radius: .5rem;
+}
+.navLink:hover i
+{
+    transform: scale(1.2);
+    transition: .5s;
+}
+.right-side
+{
+    width: 82%;
+    margin-left: 320px;
+    height: 1000px;
+    /* border: 1px solid black; */
+}
+.profile
+{
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 300px;
+    display: flex;
+}
+.picture
+{
+    width: 30%;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+.picture img 
+{
+    width: 40%;
+    margin-left:200px;
+    margin-top: 30px;
+    border-radius: 50%;
+}
+.post-detail
+{
+    width: 70%;
+    height: 100%;
+    /* border: 1px solid black;
+} */
+}
+.name-verify
+{
+    width: 65%;
+    /* border: 1px solid black; */
+    height: 70px;
+    margin-top: 30px;
+    margin-left:30px;
+    display: flex;
+    justify-content: space-between;
+}
+.name
+{
+    display: flex;
+}
+.name p
+{
+    font-size: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.name i
+{
+    margin-left: 20px;
+    font-size:25px;
+    margin-top: 5px;
+    color: #1877F2;;
+}
+.fol
+{
+    font-size: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #1877F2;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+.msg
+{
+    margin-left: 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #CCCCCC;
+}
+.bars
+{
+    width: 25%;
+    display: flex;
+    /* border: 1px solid black; */
+}
+.bars svg
+{
+    width: 40%;
+    margin-left: 10px;
+    height: 40px;
+    /* border: 1px solid black; */
+    background-color: #CCCCCC;
+}
+.posts-follow
+{
+    width: 65%;
+    /* border: 1px solid black; */
+    height: 70px;
+    margin-left:30px;
+    display: flex;
+   justify-content: space-between;
+}
+.post-32
+{
+    display: flex;
+
+}
+.post-32 h3
+{
+font-size: 30px;
+}
+.post-32 p
+{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.bio
+{
+    width: 65%;
+    /* border: 1px solid black; */
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.bio h2
+{
+font-size: 30px;
+}
+.bio p
+{
+    font-size: 25px;
+}
+.followed-by
+{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.story
+{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+}
+.story-1
+{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid black; */
+    margin-left: 50px;
+}
+.story-1 img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.title
+{
+    width: 40%;
+    height: 50px;
+    margin: auto;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.posts-logo
+{
+    display: flex;
+}
+
+.posts-logo p
+{
+    margin-left: 10px;
+    font-size: 25px;
+}
+.wrap
+{
+    width: 100%;
+    height:800px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.wrap>div
+{
+    width: 33%;
+    height: 600px;
+    border: 1px solid black;
+}
+.all
+{
+    width: 33%;
+    height: 400px;  
+}
+.all img
+{
+ width: 100%;
+ height: 100%
+}
+#animalking
+{
+    width: 33%;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+}
+#animalking img
+{
+    width: 100%;
+    height: 100%;
+}
