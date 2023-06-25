@@ -20,7 +20,7 @@ function login(event) {
     alert("login successfull");
     window.location.href = `./home.html`;
   } 
-  // else {
-  //   alert("credintials not matched");
-  // }
+  else {
+    alert("credintials not matched");
+  }
 }

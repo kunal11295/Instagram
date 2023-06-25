@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+    <style>
+        .screen
+        {
+            width: 50%;
+            height: 600px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 200px;
+            display: flex;
+        }
+        .left-side
+        {
+            width: 40%;
+            height: 100%;
+            /* border: 1px solid black; */
+        }
+        .left-side img
+        {
+            width: 100%;
+            height: 100%;
+        }
+        .right-side
+        {
+            width: 60%;
+            height: 100%;
+            /* border: 1px solid black; */
+        }
+        h1
+        {
+            margin-left: 250px;
+            color: violet;
+        }
+        form
+        {
+            width: 100%;
+            height: 100%;
+        }
+        form label
+        {
+            font-size: 40px;
+            color: violet;
+            margin-left: 30px;
+        }
+        form input
+        {
+            width: 80%;
+            height: 40px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        .submit
+        {
+            width: 50%;
+            margin: auto;
+            color: white;
+            border: none;
+        }
+        .submit input
+        {
+            background-color: #1877F2;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="left-side">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl1aTICElaQZd2nxQFOZ-IIQsymP1Ul6hNgh45lIlaWmeIf0FZi_wTVvY6m0OBJiqYsAk&usqp=CAU">
+        </div>
+        <div class="right-side">
+    <h1>ADDPOST</h1>
+    <form onsubmit="addproduct(event)">
+        <label>Name</label><br>
+        <input type="text" id="pname"><br>
+        <label>Post profile</label><br>
+        <input type="text" id="pprofile"><br>
+        <label>Post Image url </label><br>
+        <input type="text" id="pimage"><br>
+        <label>Caption</label><br>
+        <input type="text" id="pcaption"><br>
+        <div class="submit">
+            <input type="submit" value="Add Post"><br>  
+        </div>
+      
+    </form> 
+    </div>
+    </div>
+    <script>
+        function addproduct(event)
+        {
+            event.preventDefault();
+             //alert("product adding")
+             var proName=document.getElementById("pname").value;
+             var proprofile=document.getElementById("pprofile").value
+             var proImage=document.getElementById("pimage").value;
+             var procaption=document.getElementById("pcaption").value;
+             var product={proName,pprofile,proImage,procaption} ;
+
+             var Ls=JSON.parse(localStorage.getItem("InstagramProductList")) || [];
+             Ls.push(product);
+             localStorage.setItem("InstagramProductList",JSON.stringify(Ls));
+             alert("Product Successfully")
+             window.location.href = `./home.html`;
+        }
+    </script>
+
+</body>
+</html>

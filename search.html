@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .inner-search
+    {
+        width: 20%;
+        height: 200px;
+        border: 1px solid gray;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+    .search-input
+    {
+        margin-top: 20px;
+    }
+    
+    .search-profile-name
+    {
+        font-size: 30px;
+    }
+.results{
+    width: 15%;
+    height: 25%;
+    margin-top: 2%;
+    display: flex;
+    /* border: 1px solid black */
+}
+
+.search-profile-visit button
+{
+    width: 30%;
+    height: 30px;
+    margin-top: 35px;
+ background-color: #1877F2;
+ color: white;
+ margin-left: 180px;
+ border: none;
+}
+.search-input-box
+{
+    height: 30px;
+    font-size: 20px;
+}
+.search-button
+{
+    height: 30px;
+    margin-left: 20px;
+}
+    </style>
+</head>
+<body>
+    <div id="searchBox"  class="search-bar">
+        <div class="inner-search">
+            <div class="search-input">
+                <form onsubmit="SearchUser(event)">
+                    <input class="search-input-box" id="username_search_input" type="text" placeholder="Enter username" />
+                    <input class="search-button" type="submit" value="search" />
+                </form>
+            </div>
+            <div id="searchBoxResult" class="search-result">
+
+            </div>
+        </div>
+                <script>
+                     function SearchUser(event){
+            event.preventDefault();
+
+            var userSearchInput = document.getElementById("username_search_input").value;
+
+            if(userSearchInput){
+
+                var searchBoxResult = document.getElementById("searchBoxResult");
+                var instagram_userData = JSON.parse(localStorage.getItem("Instagramusers"));
+                var outputString = "";
+                for(var i=0;i<instagram_userData.length;i++){
+                    if(userSearchInput == instagram_userData[i].userName){
+                        outputString = `<div class="results">
+                        <div class="search-profile-name">
+                            <p>${instagram_userData[i].userName}</p>
+                        </div>
+                        <div class="search-profile-visit">
+                            <button>Follow</button>
+                        </div>
+                    </div>`;
+                    }
+                }
+                searchBoxResult.innerHTML = outputString;
+
+
+
+            } else {
+                alert("search field empty");
+            }
+        }
+
+                </script>
+    
+            </body>
+</html>

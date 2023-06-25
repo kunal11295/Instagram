@@ -17,7 +17,7 @@ function register(event) {
 
             if (password == confirmpassword) {
 
-                var Ls = JSON.parse(localStorage.getItem("Instagramusers")) || []
+                var Ls = JSON.parse(localStorage.getItem("Instagramuser")) || []
                 var flag = false;
                 for (var i = 0; i < Ls.length; i++) {
                     if (Ls[i].userEmail == email) {
@@ -33,7 +33,7 @@ function register(event) {
                         // mobilenumber:number
                     }
                     Ls.push(userdata);
-                    localStorage.setItem("Instagramusers",JSON.stringify(Ls))
+                    localStorage.setItem("Instagramuser",JSON.stringify(Ls))
                     alert("Registration Successful")
                     window.location.href=`./login.html`;
                     // document.getElementById("name").value = ""

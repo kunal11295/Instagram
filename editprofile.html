@@ -118,7 +118,7 @@
                     </div>                    
                     </div>
                     </div>
-                    <div class="right-side">
+                    <!-- <div class="right-side">
                         <div class="edit2">
                             <h3>Edit Profile</h3>
                         </div>
@@ -154,9 +154,92 @@
                         <div class="submit">
                             <input type="submit" value="Submit">
                         </div>
+                    </div> -->
+                    <div id="right">
+                        <div id="profilebody">
+                            <div id="profile">
+                                <div class="image2">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpSJ5Wa4Rg7HvxjUqFjuvyRd75-l8NHRSdYPoUgzBWnPI7SqMBBN30l_VTZQsDSAYr38&usqp=CAU">
+                                </div>
+                                <div class="data">
+                                    <p>Name</p>
+                                    <p>Bio</p>
+                                </div>
+                            </div>
+                            <div id="editprofile">
+                                <form onsubmit="editProfile(event)">
+                                    <label>Name:</label></br>
+                                    <input id="name" type="text" placeholder="Enter name..."/></br>
+                                    <label>Profile Image:</label></br>
+                                    <input id="image" type="text" placeholder="Enter profile Image"/></br>
+                                    <label>Bio:</label></br>
+                                    <input id="bio" type="text" placeholder="Enter Bio..."/></br>
+                                    <div class="submit1">
+                                   <input type="submit" value="submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
+                </div>
             </div>
-        
+            </div>
     </div>
+    </div>
+    <script>
+         window.onload=function(){
+            var divForProfile=document.getElementById("profile");
+            var currentUser=JSON.parse(localStorage.getItem("InstagramCurrentUser"));
+            var userdata=JSON.parse(localStorage.getItem("Instagramusers"));
+            var final_Profile;
+            for(var i=0;i<userdata.length;i++){
+                // alert("got")
+                if(currentUser.userEmail == userdata[i].userEmail){
+                    final_Profile=userdata[i].user_info;
+                }
+            }
+            console.log(final_Profile)
+            // console.log(`${final_Profile.p_image}`,"kjsdnkaj")
+            var changeProfile=` <div class="results">
+                                <img src="${final_Profile.p_image}" alt="profile" />
+                            </div>
+                            <div>
+                                <p>${final_Profile.p_name}</p>
+                                <p>${final_Profile.p_bio}</p>
+                            </div>`;
+            divForProfile.innerHTML=changeProfile;
+        }
+        function editProfile(event){
+            event.preventDefault();
+            var p_name=document.getElementById("name").value;
+            var p_image=document.getElementById("image").value;
+            var p_bio=document.getElementById("bio").value;
+            var user_profile={p_name,p_image,p_bio};
+
+            var currentUser=JSON.parse(localStorage.getItem("InstagramCurrentUsers"));
+            var userdata=JSON.parse(localStorage.getItem("Instagramusers"));
+            
+            console.log(userdata,"userdata here")
+            for(var i=0;i<userdata.length;i++){
+                // alert("inside for loop");
+                if(currentUser.userEmail==userdata[i].userEmail){
+                    alert("got");
+                    if(userdata[i].user_info == undefined){
+                        userdata[i].user_info="";
+                    }
+                    else{
+                        userdata[i].user_info=user_profile;
+                    }
+                    alert("profile_info added successfuly")
+                }
+            }
+            // console.log(userdata[i].user_info,"userinfo here")
+
+            localStorage.setItem("Instagramusers",JSON.stringify(userdata));
+            document.getElementById("name").value='';
+            document.getElementById("image").value='';
+            document.getElementById("bio").value='';
+        }
+    </script>
 </body>
 </html>
